@@ -1,0 +1,29 @@
+name: LiteEco
+main: LiteEco
+version: 1.0.0
+depend: [Vault]
+description: Light pure economy plugin, only money, vault compatible, Java8 1.13.2
+authors: [YourName]
+
+commands:
+  balance:
+    aliases: [bal, money]
+    description: Check your balance
+    usage: /<command> [player]
+  pay:
+    description: Send money to another player
+    usage: /<command> <player> <amount>
+  eco:
+    description: Admin economy command
+    usage: /<command> <give|take|set> <player> <amount>
+
+permissions:
+  liteeco.balance:
+    default: true
+    description: /bal /money
+  liteeco.pay:
+    default: true
+    description: /pay
+  liteeco.admin:
+    default: op
+    description: /eco admin command

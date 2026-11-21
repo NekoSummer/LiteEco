@@ -1,0 +1,17 @@
+# 经济配置
+starting-balance: 1000.0
+currency-symbol: "$"
+decimal-places: 2
+
+messages:
+  balance-self: "&a你的余额: &f%symbol%%balance%"
+  balance-other: "&a%player% 的余额: &f%symbol%%balance%"
+  pay-success: "&a成功转账 &f%symbol%%amount% &a给 %player%"
+  pay-receive: "&a收到来自 %player% 的转账 &f%symbol%%amount%"
+  pay-not-enough: "&c余额不足！"
+  pay-negative: "&c金额必须大于0！"
+  eco-give: "&a给 %player% 添加了 %symbol%%amount%"
+  eco-take: "&a扣除 %player% %symbol%%amount%"
+  eco-set: "&a设置 %player% 余额为 %symbol%%amount%"
+  player-not-found: "&c找不到该玩家"
+  no-permission: "&c你没有权限"
