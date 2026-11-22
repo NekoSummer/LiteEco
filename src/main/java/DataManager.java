@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.UUID;
 
-@Deprecated
 public class DataManager {
     private final LiteEco plugin;
     private final File dataFile;

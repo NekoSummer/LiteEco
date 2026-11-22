@@ -5,14 +5,18 @@ import net.milkbowl.vault.economy.Economy;
 
 public class LiteEco extends JavaPlugin {
     public EcoCore core;
-    @Deprecated
+    public EcoStorage storage;
     public DataManager dataManager;
     public Economy econ;
 
     @Override
     public void onEnable() {
         saveDefaultConfig();
-        YamlStorage storage = new YamlStorage(this);
+        String storageType = getConfig().getString("storage-type", "yaml");
+        if ("json".equalsIgnoreCase(storageType))
+            storage = new JsonStorage(this);
+        else
+            storage = new YamlStorage(this);
         double start = getConfig().getDouble("starting-balance", 1000);
         core = new EcoCore(storage, start);
         econ = new LiteEcoProvider(this, core);

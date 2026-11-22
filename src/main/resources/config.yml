@@ -2,6 +2,7 @@
 starting-balance: 1000.0
 currency-symbol: "$"
 decimal-places: 2
+storage-type: yaml
 
 messages:
   balance-self: "&a你的余额: &f%symbol%%balance%"
