@@ -15,9 +15,6 @@ public class YamlStorage implements EcoStorage {
     public YamlStorage(LiteEco plugin) {
         this.plugin = plugin;
         dataFile = new File(plugin.getDataFolder(), "balances.yml");
-        if (!dataFile.exists()) {
-            plugin.saveResource("balances.yml", false);
-        }
         config = YamlConfiguration.loadConfiguration(dataFile);
         loadAll();
     }
